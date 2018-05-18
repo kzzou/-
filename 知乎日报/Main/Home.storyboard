@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GjW-A3-sGu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="WBW-SG-I8P">
+            <objects>
+                <viewController id="GjW-A3-sGu" customClass="HomeViewController" customModule="知乎日报" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qa1-8g-b5N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bzX-ZY-bPf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="8mG-Gd-ukG" customClass="KzBannerView" customModule="知乎日报" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bzX-ZY-bPf" firstAttribute="top" secondItem="Qa1-8g-b5N" secondAttribute="top" id="Kw9-Hl-NDe"/>
+                            <constraint firstItem="bzX-ZY-bPf" firstAttribute="leading" secondItem="9rs-DQ-qDs" secondAttribute="leading" id="rMS-C7-3mo"/>
+                            <constraint firstItem="bzX-ZY-bPf" firstAttribute="trailing" secondItem="9rs-DQ-qDs" secondAttribute="trailing" id="tbY-KD-Gwd"/>
+                            <constraint firstItem="bzX-ZY-bPf" firstAttribute="bottom" secondItem="9rs-DQ-qDs" secondAttribute="bottom" id="wNJ-cS-4eR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9rs-DQ-qDs"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="bannerView" destination="8mG-Gd-ukG" id="dUV-vQ-O7J"/>
+                        <outlet property="tableView" destination="bzX-ZY-bPf" id="cad-P7-rJu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPC-jf-ry8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="489" y="107"/>
+        </scene>
+    </scenes>
+</document>
